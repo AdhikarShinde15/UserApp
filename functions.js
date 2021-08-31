@@ -17,3 +17,13 @@ const validPasswordDisplay = () => {
     passMsg[0].innerText = "Valid Password"
     passMsg[0].style.color = '#02a88e'
 }
+
+const validDate = () => {
+    dobMsg[0].innerHTML = "Valid DOB"
+    dobMsg[0].style.color = '#02a88e'
+}
+
+const invalidDate = () => {
+    dobMsg[0].innerHTML = "Invalid DOB User`s age should be Greater Than 15"
+    dobMsg[0].style.color = '#d32757'
+}

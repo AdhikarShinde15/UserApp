@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3de133cd9f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Login Page</title>
+    <title>Signup Page.</title>
 </head>
 <body>
     
@@ -20,12 +20,32 @@
                 <h4>Welcome back! Log in to your <br> account to view todays <br> clients:</h4>
             </section>
             <section class="form-fill">
-                <form action="" class="form-fields">
+                <form id="newuser" action="" class="form-fields">
                     <div class="flex-inputs">
                         <i class="far fa-envelope fa-3x"></i>
                         <span class="inputs">
                             <label for="Email"  placeholder="example@gmail.com">Email:</label><br/>
                             <input id="for-email" type="text">
+                            <p></p>
+                        </span>
+                    </div>
+                    <div class="flex-inputs">
+                        <i class="fas fa-birthday-cake fa-3x"></i>
+                        <span class="inputs">
+                            <label for="Date">DOB:</label><br/>
+                            <input id="for-dob" type="date">
+                            <p class="dob-msg"></p>
+                        </span>
+                    </div>
+                    <div class="flex-inputs">
+                        <i class="fas fa-user fa-3x"></i>
+                        <span class="inputs">
+                            <label for="Email">Position:</label><br/>
+                            <select name="position" id="position" placeholder="Select">
+                                <option value="adminstrator">Adminstrator</option>
+                                <option value="user">User</option>
+                                <option value="employee">Employee</option>
+                              </select>
                             <p></p>
                         </span>
                     </div>
@@ -38,12 +58,13 @@
                         </span>
                     </div>
                     <span class="btn-flex">
-                        <button class="btn">Log in</button>
-                        <span>Do Not Have an Account <a href="/UserApp/signin.html">Signin Here</a></span>
+                        <button class="btn">Signup Up</button>
+                        <span>Already Have an Account <a href="/UserApp/login.html">Login Here</a></span>
                     </span>
                 </form>
             </section>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
         <script src="functions.js"></script>
     <script src="app.js"></script>
 </body>

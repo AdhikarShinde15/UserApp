@@ -14,9 +14,9 @@ body {
 }
 
 .bg-img{
-       background-image: url('/UserApp/img/login-bg.png');
+       background-image: url('/UserApp/img/login.png');
        background-size: cover; 
-       height: inherit;
+       
        /* width: 100%; */
 }
 
@@ -69,7 +69,7 @@ i{
     margin-top: 9px;
 }
 
-input {
+input,select  {
    color: #000;
    border-style: none;
    box-sizing: border-box;
@@ -143,4 +143,14 @@ h4 {
 .fa-check-circle:before {
     content: "\f058";
     color: darkgray;
+}
+
+.fa-birthday-cake:before {
+    content: "\f1fd";
+    color: darkgray;
+}
+
+.fa-user:before {
+    content: "\f007";
+    color: darkgrey;
 }
