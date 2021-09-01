@@ -1,10 +1,9 @@
 
-let userData = []
+let userData = JSON.parse(localStorage.getItem('userData'))
 // console.log( uuidv4())
 
 const p = document.getElementsByTagName('p')
 const passMsg = document.getElementsByClassName('pass-msg')
-const dobMsg = document.getElementsByClassName('dob-msg')
 let userEmail
 let userPass
 let userDob
@@ -41,34 +40,13 @@ document.querySelector('#for-pass').addEventListener('input', e => {
      }
 })
 
-document.querySelector('#for-dob').addEventListener('input' , e => {
-  userDob = e.target.value
-  const splitdate = (e.target.value).split('-')
-  const today = new Date()
-  const currentYear = today.getFullYear()
-
-  if(currentYear-splitdate[0] >= 15){
-    dobFlag = 1
-    validDate()
-  }
-  else{
-    dobFlag = 0
-    invalidDate()
-  }
+document.querySelector('#userlogin').addEventListener('submit', (e) => {
+  e.preventDefault()
+   const enteredEmail = document.getElementById('for-email').value
+   const enteredPass = document.getElementById('for-pass').value
+   
+ const currentUser= userData.filter((dataObject) => dataObject.userEmail === enteredEmail)
+ console.log(currentUser)
+  
 })
-console.log(mailFlag)
-document.querySelector('#newuser').addEventListener('submit', (e) => {
-  // if(mailFlag === passFlag === dobFlag === 1){
-     userData.push({
-     id : uuidv4(),
-     userEmail : userEmail,
-     userPass : userPass,
-     userDob : userDob,
-     position : document.getElementById('position').value
-  })
-  localStorage.setItem('userData',JSON.stringify(userData))
-// } 
-})
-
-    
 
