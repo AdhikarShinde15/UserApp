@@ -1,0 +1,81 @@
+*{
+    
+    height: 100%;
+}
+
+body{
+   margin: 0;
+
+}
+
+.fullbody{
+    border: thin solid teal;
+    height: 88%;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 31px;
+}
+ .card {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.img {
+   background: url('/UserApp/img/person.png') no-repeat center;
+   border-bottom : 3px solid darkgray;
+   
+}
+/* .info {
+   
+    /* border: 5px solid red; 
+    
+} */
+
+.username {
+    height: fit-content;
+    font-size: 24px;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+
+.user-info {
+    display: contents;
+}
+
+.email{
+    display: contents;
+}
+
+.phone {
+    display: contents;
+}
+
+.website {
+    display: contents;
+}
+
+i {
+    height: fit-content;
+}
+
+span {
+    margin: 6px;
+    padding: 6px;
+    font-size: 23px;
+}
+
+.fa-envelope-open-text:before {
+    content: "\f658";
+    color: darkgrey;
+}
+
+.fa-phone-square-alt:before {
+    content: "\f87b";
+    color: darkgray;
+}
+
+.fa-edge:before {
+    content: "\f282";
+    color: darkgray;
+}

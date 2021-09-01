@@ -51,10 +51,8 @@ document.querySelector('#userlogin').addEventListener('submit', (e) => {
     
     if(currentUser.userPass === enteredPass && currentUser !== null )
     window.location.href = "https://www.google.com/";
-    else {
-      incorrectEmail()
+    else 
       incorrectPass()
-    }
     }else {
       incorrectEmail()
       incorrectPass()
