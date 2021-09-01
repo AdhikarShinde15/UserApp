@@ -56,26 +56,19 @@ document.querySelector('#for-dob').addEventListener('input' , e => {
     invalidDate()
   }
 })
-
+console.log(mailFlag)
 document.querySelector('#newuser').addEventListener('submit', (e) => {
-
-  userData.push({
-    Id : uuidv4(),
-    userEmail : userEmail,
-    userPass : userPass,
-    userDob : userDob,
-    position : document.getElementById('position').value
+  // if(mailFlag === passFlag === dobFlag === 1){
+     userData.push({
+     id : uuidv4(),
+     userEmail : userEmail,
+     userPass : userPass,
+     userDob : userDob,
+     position : document.getElementById('position').value
   })
   localStorage.setItem('userData',JSON.stringify(userData))
-  
+// } 
 })
-// if(mailFlag === passFlag === dobFlag === 0){
-//     userData.Id = uuidv4()
-//     userData.userEmail = userEmail
-//     userData.userPass = userPass
-//     userData.userDob = userDob
-//     userData.position = document.getElementById('position').value
-//     console.log(userData)
-// }
 
-// console.log(userData)
+    
+
