@@ -1,15 +1,15 @@
 
-let userData = JSON.parse(localStorage.getItem('userData'))
-// console.log( uuidv4())
+const userData = getUserData()
+
 
 const p = document.getElementsByTagName('p')
 const passMsg = document.getElementsByClassName('pass-msg')
 let userEmail
 let userPass
-let userDob
+
 let mailFlag
 let passFlag
-let dobFlag
+
 
 
 document.querySelector('#for-email').addEventListener('input', e => {
@@ -31,22 +31,36 @@ document.querySelector('#for-email').addEventListener('input', e => {
 document.querySelector('#for-pass').addEventListener('input', e => {
       userPass = e.target.value
      if(e.target.value.length<=8){
-       passFlag = 1
+       passFlag = 0
       invalidPasswordDisplay();
      }
      else{
-       passFlag = 0
+       passFlag = 1
       validPasswordDisplay();
      }
 })
 
 document.querySelector('#userlogin').addEventListener('submit', (e) => {
   e.preventDefault()
-   const enteredEmail = document.getElementById('for-email').value
-   const enteredPass = document.getElementById('for-pass').value
-   
- const currentUser= userData.filter((dataObject) => dataObject.userEmail === enteredEmail)
- console.log(currentUser)
+  
+  if(mailFlag === passFlag){
+    const enteredEmail = userEmail
+    const enteredPass = userPass
+    if(userData.find((dataObject) => dataObject.userEmail === enteredEmail)){
+      const currentUser= userData.find((dataObject) => dataObject.userEmail === enteredEmail)
+    
+    if(currentUser.userPass === enteredPass && currentUser !== null )
+    window.location.href = "https://www.google.com/";
+    else {
+      incorrectEmail()
+      incorrectPass()
+    }
+    }else {
+      incorrectEmail()
+      incorrectPass()
+    }
+    
+  }
   
 })
 

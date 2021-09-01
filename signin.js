@@ -1,4 +1,4 @@
-let userData = JSON.parse(localStorage.getItem('userData'))
+const userData = getUserData()
 
 const dobMsg = document.getElementsByClassName('dob-msg')
 const p = document.getElementsByTagName('p')
@@ -30,11 +30,11 @@ document.querySelector('#for-email').addEventListener('input', e => {
  document.querySelector('#for-pass').addEventListener('input', e => {
        userPass = e.target.value
       if(e.target.value.length<=8){
-        passFlag = 1
+        passFlag = 0
        invalidPasswordDisplay();
       }
       else{
-        passFlag = 0
+        passFlag = 1
        validPasswordDisplay();
       }
  })
@@ -57,15 +57,23 @@ document.querySelector('#for-dob').addEventListener('input' , e => {
 })
 
 document.querySelector('#newuser').addEventListener('submit', (e) => {
-  // if(mailFlag === passFlag === dobFlag === 1){
-     userData.push({
-     id : uuidv4(),
-     userEmail : userEmail,
-     userPass : userPass,
-     userDob : userDob,
-     position : document.getElementById('position').value
-  })
+  e.preventDefault()
+   if(userData.find((dataObject) => dataObject.userEmail === userEmail))
+     noDataRepeat();
+   else {
+    if(mailFlag === 1 &&  passFlag  === 1 && dobFlag === 1){
+       userData.push({
+       id : uuidv4(),
+       userEmail : userEmail,
+       userPass : userPass,
+       userDob : userDob,
+       position : document.getElementById('position').value
+        })
+    
+     localStorage.setItem('userData',JSON.stringify(userData))
+     window.location.href = "http://127.0.0.1:5501/UserApp/login.html";
+   } 
+}
   
-  localStorage.setItem('userData',JSON.stringify(userData))
-// } 
+   
 })
