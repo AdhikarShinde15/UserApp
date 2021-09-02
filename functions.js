@@ -50,3 +50,13 @@ const invalidDate = () => {
     dobMsg[0].innerHTML = "Invalid DOB User`s age should be Greater Than 15"
     dobMsg[0].style.color = '#d32757'
 }
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    location.reload();
+    document.getElementById("myForm").style.display = "none";
+    
+  }

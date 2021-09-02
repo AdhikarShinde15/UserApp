@@ -50,10 +50,10 @@ document.querySelector('#userlogin').addEventListener('submit', (e) => {
       const currentUser= userData.find((dataObject) => dataObject.userEmail === enteredEmail)
     
     if(currentUser.userPass === enteredPass && currentUser !== null ){
-      cUser = currentUser.id ;
+     const cUser = currentUser.id ;
       localStorage.setItem('currentUser',JSON.stringify(cUser));
       window.location.href = "http://127.0.0.1:5501/UserApp/home.html";
-    }else 
+    }else
       incorrectPass()
     }else {
       incorrectEmail()

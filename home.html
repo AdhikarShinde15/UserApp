@@ -11,7 +11,7 @@
 <body>
    <section class="fullbody">
        <div class="card">
-         
+       
              <div class="img"></div>
              <div class="info">
                <p class="username"></p><br>
@@ -19,6 +19,11 @@
                 <span class="email-info">
                  <i class="fas fa-envelope-open-text fa-2x"></i>
                  <p class="email"></p>
+                </span>
+                <br>
+                <span class="birth-info">
+                  <i class="fas fa-birthday-cake fa-2x"></i>
+                  <p class="h-dob"></p>
                 </span>
                 <br>
                 <span class="phone-info">
@@ -30,11 +35,36 @@
                     <i class="fab fa-edge fa-2x"></i>             
                     <p class="position"></p>
                 </span><br><br>
+                <div class="form-popup" id="myForm">
+                  <span>Edit Data</span>
+                  <form id="userUpdate" action="">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="updateName"><br>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="updateEmail"><br>
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" id="updatePhone"><br>
+                    <label for="Date">DOB:</label>
+                    <input  type="date" id="updateDob"><br>
+                    <label for="position">Position</label>
+                    <select name="position" id="updatePosition" placeholder="Select">
+                      <option value="">Select</option>
+                      <option value="adminstrator">Adminstrator</option>
+                      <option value="user">User</option>
+                      <option value="employee">Employee</option>
+                    </select><br>
+                    <label for="password">Password:</label>
+                    <input id="updatePass" type="password"><br>
+                    <span><button class="submit-button">Submit</button></span>
+                    <span><button class="close-button" onclick="closeForm()">Close</button></span>
+                  </form>
+                </div>
+                <span><button type="button" class="open-button" onclick="openForm()">Edit</button></span>
+                <span><button>Delete</button></span>
                 <span><a href="/UserApp/login.html">LogOut</a></span>
              </span>
            </div>
-           
-       </div>
+        </div>
        
    </section>
    <script src="functions.js"></script>
