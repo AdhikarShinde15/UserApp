@@ -64,7 +64,9 @@ document.querySelector('#newuser').addEventListener('submit', (e) => {
     if(mailFlag === 1 &&  passFlag  === 1 && dobFlag === 1){
        userData.push({
        id : uuidv4(),
+       userName : document.getElementById('for-name').value,
        userEmail : userEmail,
+       userPhone :document.getElementById('for-phone').value,
        userPass : userPass,
        userDob : userDob,
        position : document.getElementById('position').value
