@@ -108,3 +108,30 @@ button{
     display: none;
     height: max-content;
 }
+
+.dob-msg{
+    display: contents;
+}
+
+.email-msg, .dob-msg , .pass-msg{
+    display: contents;
+    height: min-content;
+    font-size: 14px;
+}
+
+.deleteUserPopup {
+    width: 500px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+    padding: 10px;
+    text-align: center;
+    display: none;
+    height: max-content;
+}

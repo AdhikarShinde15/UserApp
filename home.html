@@ -42,10 +42,12 @@
                     <input type="text" name="name" id="updateName"><br>
                     <label for="email">Email</label>
                     <input type="text" name="email" id="updateEmail"><br>
+                    <p class="email-msg"></p><br>
                     <label for="phone">Phone</label>
                     <input type="text" name="phone" id="updatePhone"><br>
                     <label for="Date">DOB:</label>
                     <input  type="date" id="updateDob"><br>
+                    <p class="dob-msg"></p><br>
                     <label for="position">Position</label>
                     <select name="position" id="updatePosition" placeholder="Select">
                       <option value="">Select</option>
@@ -55,13 +57,19 @@
                     </select><br>
                     <label for="password">Password:</label>
                     <input id="updatePass" type="password"><br>
+                    <p class="pass-msg"></p><br>
                     <span><button class="submit-button">Submit</button></span>
-                    <span><button class="close-button" onclick="closeForm()">Close</button></span>
+                    <span><button class="close-button" id="close">Close</button></span>
                   </form>
                 </div>
+                <div class="deleteUserPopup" id="deleteUserPopup">
+                  <label for="sure">Are You Sure You Want to Delete All Data ?</label><br>
+                  <span><button class="confirmDelete" id="yes">YES</button></span>
+                  <span><button class="dontDelete" id="no">NO</button></span>
+                </div>
                 <span class="edit"><i type="button"  class="far fa-edit fa-2x open-button" onclick="openForm()"></i></span>
-                <span><i class="far fa-trash-alt fa-2x"></i></span>
-                <span><a href="/UserApp/login.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></span>
+                <span><i id="delete" class="far fa-trash-alt fa-2x"></i></span>
+                <span><a href="/UserApp/login.html"><i id="logout" class="fas fa-sign-out-alt fa-2x"></i></a></span>
              </span>
            </div>
         </div>

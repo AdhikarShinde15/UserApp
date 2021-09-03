@@ -55,8 +55,8 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
 }
 
-function closeForm() {
-    location.reload();
-    document.getElementById("myForm").style.display = "none";
+// function closeForm() {
+//     location.reload();
+//     document.getElementById("myForm").style.display = "none";
     
-  }
+//   }
